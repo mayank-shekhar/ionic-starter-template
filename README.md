@@ -1,157 +1,139 @@
 # Starter App
-This project was generated with Generator-M-Ionic v1.9.2. For more info visit the [repository](https://github.com/mwaylabs/generator-m-ionic) or check out the README below.
 
-# Generator-M-Ionic v1.9.2
+## Get started
+### Node and dependencies
+- clone the repo.
 
-[![NPM version](http://img.shields.io/npm/v/generator-m-ionic.svg?style=flat-square)][npm-url]
-[![Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][coveralls-url]
-[![Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][travis-url]
-[![Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/master.svg?style=flat-square)][daviddm-url]
-[![Download Month](http://img.shields.io/npm/dm/generator-m-ionic.svg?style=flat-square)][npm-url]
+- node & npm - http://nodejs.org/download/
+  - gulp: `npm install --global gulp` - http://gulpjs.com/
+  - bower: `npm install --global bower` - http://bower.io/
 
-[npm-url]: https://npmjs.org/package/generator-m-ionic
-[coveralls-url]: https://coveralls.io/r/mwaylabs/generator-m-ionic?branch=master
-[travis-url]: https://travis-ci.org/mwaylabs/generator-m-ionic
-[daviddm-url]: https://david-dm.org/mwaylabs/generator-m-ionic
+- Run `npm install` and `bower install`.
 
-Development:
+## Running in the browser
+```sh
+gulp watch
+```
+Prepares everything for development and opens your default browser. Livereloads your application when changing/adding/deleting files to immediately reflect the changes you make. For your convenience any occurring **ESLint or jsonlint errors** will be presented to you on every livereload.
 
-[![Dev Coverage Status](http://img.shields.io/coveralls/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][coveralls-url]
-[![Dev Build Status](https://img.shields.io/travis/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)][travis-url]
-[![Dev Dependency Status](http://img.shields.io/david/mwaylabs/generator-m-ionic/dev.svg?style=flat-square)](https://david-dm.org/mwaylabs/generator-m-ionic/dev)
+```sh
+gulp watch --no-open
+```
+If you don't want this task to open your browser, just add the `--no-open` option and navigate to `http://localhost:9000` yourself.
 
+```sh
+gulp build
+gulp build --force-build # build despite linting errors
+gulp build --minify # minifies javascript, CSS, HTML and images.
 
-## Why you need it
-<p align="center">
-  <a href="https://github.com/mwaylabs/generator-m-ionic" alt="Generator-M-Ionic">
-    <img width="175" src="https://raw.githubusercontent.com/mwaylabs/generator-m-ionic/dev/docs/resources/logo.png">
-  </a>
-</p>
-
-> **Advanced workflows for building rock-solid Ionic apps**: develop, prototype, test, build and deliver high quality apps with Yeoman, Gulp, Bower, Angular, Cordova and of course Ionic. All in one sexy generator.
-
-**[Read more ... ](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/why_you_need_it.md)**
-
-### What's in the box
-<br>
-<br>
-<p align="center" >
-  <a href="http://yeoman.io/" target="_blank" alt="yeoman" title="yeoman">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041228/c1f91cac-ac7a-11e4-9c85-1a5298e29067.png">
-  </a>
-  <a href="http://gulpjs.com/" target="_blank" alt="gulp" title="gulp">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/9409728/c5332474-481c-11e5-9a6e-74641a0f1782.png">
-  </a>
-  <a href="http://bower.io/" target="_blank" alt="bower" title="bower">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041250/ef9a78b8-ac7a-11e4-9586-7e7e894e201e.png">
-  </a>
-  <a href="https://www.browsersync.io/" target="_blank" alt="bower" title="bower">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/16412038/77028548-3d2a-11e6-88d0-2c0d66582f4c.png">
-  </a>
-  <a href="https://angularjs.org/" target="_blank" alt="angular" title="angular">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041199/5978cb96-ac7a-11e4-9568-829e2ea4312f.png">
-  </a>
-  <a href="http://ionicframework.com/" target="_blank" alt="ionic" title="ionic">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041296/59c5717a-ac7b-11e4-9d5d-9c5232aace64.png">
-  </a>
-  <a href="http://cordova.apache.org/" target="_blank" alt="cordova" title="cordova">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/6041269/20ed1196-ac7b-11e4-8707-68fa331f1aeb.png">
-  </a>
-  <br>
-  <br>
-  <a href="http://sass-lang.com/" target="_blank" alt="sass" title="sass">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/9410121/c330a3de-481e-11e5-8a69-ca0c56f6cabc.png">
-  </a>
-  <a href="http://eslint.org/" target="_blank" alt="eslint" title="eslint">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/15893052/ada5651e-2d7d-11e6-9246-dc749c7afd63.png">
-  </a>
-  <a href="http://karma-runner.github.io/" target="_blank" alt="karma" title="karma">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/9410216/44fef8fc-481f-11e5-8037-2f7f03678f4c.png">
-  </a>
-  <a href="http://jasmine.github.io/" target="_blank" alt="jasmine" title="jasmine">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/9410153/ebd46a00-481e-11e5-9864-f00fa8427d17.png">
-  </a>
-  <a href="https://angular.github.io/protractor/#/" target="_blank" alt="protractor" title="protractor">
-    <img height="100" src="https://cloud.githubusercontent.com/assets/1370779/9410114/b99aaa9a-481e-11e5-8655-ebc1e324200d.png">
-  </a>
-</p>
-<br>
-<br>
-
-**[Read more ...](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/whats_in_the_box.md)**
-
-### What's new
-1.9.0
-- **Livereload** for the device! Wohoo! See [how it's done](https://github.com/mwaylabs/generator-m-ionic/blob/master/docs/guides/development_intro.md#run-on-device-or-emulator-with-livereload).
-- **Testing workflow** improvements
-  - **Precommit hooks** and others in a new [Husky Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/testing_workflow.md)
-  - **gulp protractor** now returns, allowing it to be used with husky, travis, jenkins, ...
-- **Questions** the generator asks are documented and explained in the [Questions](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/questions.md) document
-- [read more ...](https://github.com/mwaylabs/generator-m-ionic/releases/tag/1.9.0)
-
-## Quick Start
-- [Quick Start](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/intro/quick_start.md) for the experienced developer.
-- [Try the demo](https://github.com/mwaylabs/generator-m-ionic-demo). Get a quick impression by cloning the sample project generated with the latest version of Generator-M-Ionic.
+# this works as well with all cordova build-related commands (as they implicitly run gulp build)
+gulp --cordova 'run ios --device' --force-build --minify
+```
+Usually you don't run this command directly, but it will be implicitly run by any build-related Cordova task `gulp watch-build`. It builds your angular app and moves it to the `www/` folder and performs **ESLint or jsonlint** checks.
 
 
-## Guides
-##### Setup
-- [Installation and Prerequisites](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/installation_prerequisites.md)
-- [Questions](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/questions.md) the generator will ask and what they mean
+# Use Environments
+> The environment feature allows you to change sets of API Endpoints, Keys, Tokens, App Behavior Switches, Debugging Options and much more with a single parameter for you gulp tasks.
 
-##### Basics
-- [Development Introduction](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/development_intro.md)
-- [File structure](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/file_structure.md)
-- [Sub-generators](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/sub_generators.md) for adding new components.
-- [Git integration](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/git_integration.md), see how it's done.
-- [Sass integration](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/sass_integration.md) in our module concept.
-- [Bower component usage](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/bower_component_usage.md) in our module concept.
-- [Ionic style source](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/ionic_style_source.md), change it from CSS to Sass or vice versa.
+## Choosing an environment
+When you run `gulp watch` or any other task that runs `gulp build` without specifying an environment it will default to the dev environment:
+```shell
+gulp watch                # defaults to --env=dev
+gulp build                # so does this
+gulp --cordova 'run ios'  # and any other command that uses gulp build
+```
+In order to choose an environment explicitly add the `--env` flag, like this:
+```shell
+gulp watch --env=prod
+gulp build --env=prod
+gulp --cordova 'run ios' --env=prod
+```
+While you're running `gulp watch` you can even **temporarily** switch the environment you're currently working on without having to restart your watch task. Simply type:
+```shell
+gulp environment --env=<env>
+```
+Gulp will livereload with your new environment! It's **important** to note that as soon as you are making more changes and a livereload is triggered, your environment switches back to the one that was supplied when `gulp watch` was started. If you want to **permanently** switch your environment you should do so by restarting your `gulp watch` tasks with the desired environment.
 
-##### Quality
-- [ESLint](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/eslint.md) code style checks and setting up your IDE/Editor.
-- [Testing](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/testing.md) with our testing setup.
-- [Husky hooks](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/testing_workflow.md), automatically run linting and tests before you commit.
+## Creating a new environment
+If you find yourself faced needing more than a dev and a prod environment simply create a new file: e.g. `app/main/constants/env-env5.json`, fill it with the desired values and then run one the following:
+```shell
+gulp watch --env=env5
+gulp build --env=env5
+gulp environment --env=env5
+```
 
-##### Advanced
-- [CORS & Proxying](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/cors_proxy.md), how to cope with CORS issues.
-- [App Icons and splash screens](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/icons_splash_screens.md), a simple setup or different sets for different builds - all is possible.
-- [Use Environments](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/environments.md) manage different API Endpoints and much more with just a single parameter.
-- [Gulp defaults](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/gulp_defaults.md), spare yourself some tedious typing on the command line.
-- [Generator Update (experimental)](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/generator_update.md) can help you update to a new generator version.
+#### Cordova CLI wrapper
+```sh
+gulp --cordova '<run any cordova command>'
+```
+A wrapper for **local installation** of Cordova CLI that comes with the generator. As opposed to a global installation the local installation allows you to have different projects with different CLI versions, which happens a lot if you have several projects with different schedules. Additionally this gulp wrapper can trigger additional gulp commands, significantly reducing the number of commands it takes to build your app. You'll learn about this in a minute.
+
+How to use it?
+
+```sh
+# regular cordova command (when installed globally).
+# DON'T USE!
+cordova plugin add org.apache.cordova.camera
+# cordova command with local wrapper
+gulp --cordova 'plugin add org.apache.cordova.camera --save'
+```
+
+Find more plugins on the [Cordova Website](https://cordova.apache.org/plugins/) or on [ngCordova](http://ngcordova.com/docs/plugins/) and find a full list of supported platforms [here](https://cordova.apache.org/docs/en/latest/guide/platforms/index.html).
+
+#### Cordova build, run, emulate, ... under the hood
+
+```sh
+gulp --cordova '<build related task>' # runs gulp build, then cordova command
+```
+
+If you run one of the commands above or following Cordova commands: `build <platform>`, `run <platform>`, `emulate <platform>`, `serve` or `prepare <platform>` then under the hood `gulp build` will build your Ionic app into the `www/` folder, then the Cordova command will take it from there.
+
+So running:
+```sh
+gulp --cordova 'run android'
+# is exactly the same as
+gulp build
+gulp --cordova 'run android' --no-build
+```
+So as you can see the implicit run of `gulp build` that comes with any of the above mentioned Cordova commands can be disabled by adding the `--no-build` flag. This can be handy if you don't make any changes to the source files or just want to be more verbose to make it more obvious what's happening.
+```sh
+gulp --cordova 'run ios --device' --no-build # no gulp build, only cordova run ios
+gulp --cordova 'run android' --no-build # same for android or any other platform
+```
+
+#### Run on device or simulator
+If you want to run your app on your connected iOS or Android device or a simulator run:
+```sh
+gulp --cordova 'run ios --device' # runs gulp build, then cordova run ios
+gulp --cordova 'run android' # same for android
+
+```
+or
+```sh
+gulp --cordova 'emulate ios'
+gulp --cordova 'emulate android'
+```
+
+Both commands require your system to be setup correctly for the given platform as described in the Cordova [Platform Guides](http://cordova.apache.org/docs/en/latest/guide/platforms/index.html).
+
+To emulate a specific device and iOS version (iOS version needs to be installed via Xcode) run:
+```sh
+gulp --cordova 'emulate ios --target="iPad-Air, 8.4"'
+gulp --cordova 'emulate ios --target="iPad-Air, 9.0"'
+# to list available targets on your machine, run:
+`./platforms/ios/cordova/lib/list-emulator-images`
+```
+
+#### Run using Xcode instead of command line
+Some people prefer to launch their apps (device or emulator) using the Xcode project that lies in `platforms/ios/`. This is sometimes handy because [ios-deploy](https://github.com/phonegap/ios-deploy) which is used by the Cordova CLI to run your apps via the command line can have its quirks.
+
+In order to view changes that you made in the project run the following:
+```sh
+gulp --cordova 'prepare ios'
+# or individually
+gulp build
+gulp --cordova 'prepare ios' --no-build
+```
+Then run or simulate via Xcode.
 
 
-##### Building & Continuous Integration
-- [Build Vars](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/build_vars.md), inject vars into your app at build time.
-- [Programmatically change the `config.xml`](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/guides/programmatically_change_configxml.md), an essential part for a successful continuous integration setup. Add environments and build vars for a full blown continuous integration use case!
-
-##### Ecosystems
-- [Ionic Platform](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/ionic_platform.md) (beta) - A cloud platform for managing and scaling cross-platform mobile apps
-- [Appmobi](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/appmobi.md) - Secure Mobile Development Platform
-- [ApiOmat](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/ecosystems/apiomat.md) (beta) - Enterprise Backend as a Service
-
-## Generator Insights
-We've published 3 blog articles on our company blog delivering deep insights into the why and how of the generator:
-- September 2015: [Generator-M-Ionic and the search for the holy grail](http://blog.mwaysolutions.com/2015/09/21/generator-m-ionic-and-the-search-for-the-holy-grail/)
-  - rather **technical comparison** between the generator and similar tools as well as technical insights to the **decisions and motivation** behind the generator
-- September 2015: [Generator-M-Ionic: HTML5 mobile app development evolved](http://blog.mwaysolutions.com/2015/09/10/generator-m-ionic-html5-mobile-app-development-evolved/)
-    - provides insight to the **technology choices and ecosystem** and the **benefits of using the generator**
-- March 2015: [Generator-M: the state of HTML5 mobile app development at M-Way](http://blog.mwaysolutions.com/2015/03/26/generator-m-the-state-of-html5-mobile-app-development-at-m-way/)
-  - the **origins** of the generator development and **company strategy**
-
-
-## Questions, issues? Talk to us!
-Do the following:
- 1. check out our [Issue Guidelines](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/issue_guide.md) and [issues](https://github.com/mwaylabs/generator-m-ionic/issues) to see if there already is a solution or answer.
- 2. [![Join the chat at https://gitter.im/mwaylabs/generator-m-ionic](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/mwaylabs/generator-m-ionic?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) - Get in touch with other developers and our core team.
- 3. If all fails, make sure you have read the [Issue Guidelines](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/issue_guide.md) **first** and then [open a new issue](https://github.com/mwaylabs/generator-m-ionic/issues/new).
-
-## Want to contribute ideas, code?
-Start by reading our:
-
-1. [Mission Statement](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/mission_statement.md)
-2. [Contribution Guide](https://github.com/mwaylabs/generator-m-ionic/tree/master/docs/contribute/contribution_guide.md)
-
-
-## License
-Code licensed under MIT. Docs under Apache 2. PhoneGap is a trademark of Adobe.
